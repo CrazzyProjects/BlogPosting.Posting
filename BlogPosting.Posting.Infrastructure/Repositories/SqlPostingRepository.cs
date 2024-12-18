@@ -17,7 +17,7 @@ namespace BlogPosting.Posting.Infrastructure.Repositories
 
         public async Task<bool> SavePostAsync(PublishPost publishPost)
         {
-            // TODO: Test
+            // TODO: Test 2
             PublishPostModel publishPostModel = _mapper.MapToPublishPostModel(publishPost);
             await _context.Posting.AddAsync(publishPostModel);
             int result = await _context.SaveChangesAsync();
