@@ -5,6 +5,7 @@ namespace BlogPosting.Posting.Application.Commands
 {
     public class PublishPostCommand : IRequest<PostingViewModel>
     {
+        public Guid Id { get; } = Guid.NewGuid();
         public required string UserCode { get; set; }
         public required string Title { get; set; }
         public required string Content { get; set; }

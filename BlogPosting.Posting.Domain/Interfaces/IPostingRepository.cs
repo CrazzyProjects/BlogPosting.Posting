@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BlogPosting.Posting.Domain.Entities;
 
 namespace BlogPosting.Posting.Domain.Interfaces
 {
     public interface IPostingRepository
     {
-
+        Task<bool> SavePostAsync(PublishPost publishPost);
     }
 }
